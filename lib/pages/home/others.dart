@@ -74,11 +74,25 @@
 //   }
 // }
 
+import 'dart:math';
+
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
+import 'package:my_blog/pages/home/data.dart';
 import '../checkIn/custom_route.dart';
 import 'home.dart';
+
+String generateNickname() {
+  final animals = ['Panda', 'Kangaroo', 'Fox', 'Squirrel', 'Lion', 'Dolphin', 'Owl', 'Elephant'];
+  final random = Random();
+
+  final animal = animals[random.nextInt(animals.length)];
+  final number = random.nextInt(99) + 1;
+
+  return '$animal$number';
+}
+
 
 class SpacePage extends StatelessWidget {
   final List<String> images = [
@@ -160,15 +174,16 @@ class SpacePage extends StatelessWidget {
                           children: <Widget>[
                             ClipRRect(
                               borderRadius: BorderRadius.circular(15),
-                              child: Image.asset(
-                                'assets/images/avatar.jpg',
-                                width: 30.0,
-                                height: 30.0,
+                              child:Image.network(
+                                "${images[(index*2) % 6]}",
+                                width: 30,
+                                height: 30,
+                                fit: BoxFit.cover,
                               ),
                             ),
                             SizedBox(width: 8),
                             Text(
-                              '昵称',
+                              '${generateNickname()}',
                               style: TextStyle(
                                 fontSize: 16,
                                 fontWeight: FontWeight.bold,
@@ -184,11 +199,13 @@ class SpacePage extends StatelessWidget {
                         ),
                         SizedBox(height: 4),
                         Text(
-                          '成功的秘诀就是每天都比昨天更努力',
+                          '${geneEssay()}',
                           style: TextStyle(
                             fontSize: 14,
                             color: Colors.grey,
                           ),
+                          maxLines: 3,
+                          overflow: TextOverflow.ellipsis,
                         ),
                       ],
                     ),

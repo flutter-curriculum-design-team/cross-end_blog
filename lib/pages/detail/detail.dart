@@ -108,7 +108,7 @@ class ArticleDetailPage extends StatelessWidget {
                   borderRadius: BorderRadius.circular(5.0),
                   child: CachedNetworkImage(
                     imageUrl:
-                        'https://picsum.photos/seed/${this.image}/600/400',
+                        '${image}',
                     placeholder: (context, url) => Center(
                       child: CircularProgressIndicator(),
                     ),
