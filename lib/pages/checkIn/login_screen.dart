@@ -13,7 +13,6 @@ import '../home/home.dart';
 import 'custom_route.dart';
 
 
-
 class LoginScreen extends StatelessWidget {
   //定义路由名称
   static const routeName = '/auth';
@@ -40,7 +39,7 @@ class LoginScreen extends StatelessWidget {
         } else {
           // 移动平台和桌面平台可以使用SharedPreferences存储
           SharedPreferences prefs = await SharedPreferences.getInstance();
-          prefs.setString('Authorization', "Bearer "+token);
+          prefs.setString('Authorization', "Bearer "+ token);
         }
       } else {
         return response['msg'];
@@ -54,7 +53,7 @@ class LoginScreen extends StatelessWidget {
     // Generate a random number between 0 and 100
     final int randomNumber = 1 + Random().nextInt(9);
     // Show a dialog with a slider that goes from 0 to 100
-    // return true;
+    return true;
     // 这里为了方便调试，先去掉的防爆破!!??！！？？
     final result = await showDialog<int>(
       context: context,

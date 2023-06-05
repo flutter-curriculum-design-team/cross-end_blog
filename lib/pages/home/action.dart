@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:my_blog/pages/home/others.dart';
+import 'package:my_blog/pages/explore/others.dart';
 import 'package:my_blog/mock/home.dart';
 
 

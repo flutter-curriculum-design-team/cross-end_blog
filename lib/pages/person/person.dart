@@ -24,7 +24,7 @@ class Person extends StatefulWidget {
 }
 
 class _PersonState extends State<Person> {
-  bool _isLoading = true;
+  bool _isLoading = false;
   Map<String, dynamic> _data = {};
 
   @override
@@ -83,7 +83,7 @@ class _PersonState extends State<Person> {
                         bottom: -40,
                         child: CircleAvatar(
                           backgroundImage:
-                          AssetImage('assets/images/avatar.jpg'),
+                              AssetImage('assets/images/avatar.jpg'),
                           // AssetImage('${_data['data']['userInfoDto']['avatar']}'),
                           //这里设置的是半径
                           radius: 40,
@@ -114,8 +114,8 @@ class _PersonState extends State<Person> {
                         Padding(
                           padding: const EdgeInsets.only(left: 80),
                           child: Text(
-                            '${_data['data']['userInfoDto']['nickname']}',
-                            // "名字",
+                            // '${_data['data']['userInfoDto']['nickname']}',
+                            "名字",
                             style: TextStyle(
                               fontWeight: FontWeight.bold,
                               fontSize: 24,
@@ -171,7 +171,8 @@ class _PersonState extends State<Person> {
                                 color: Colors.grey[700], size: 25),
                             SizedBox(width: 10),
                             Text(
-                              '${_data['data']['userInfoDto']['email']}',
+                              // '${_data['data']['userInfoDto']['email']}',
+                              "邮箱地址",
                               style: TextStyle(
                                 color: Colors.grey[700],
                                 fontSize: 14,
@@ -194,7 +195,8 @@ class _PersonState extends State<Person> {
                             SizedBox(width: 10),
                             Expanded(
                               child: Text(
-                                '${_data['data']['userInfoDto']['gender']}',
+                                // '${_data['data']['userInfoDto']['gender']}',
+                                "性别",
                               ),
                             ),
                           ],
@@ -214,7 +216,8 @@ class _PersonState extends State<Person> {
                             SizedBox(width: 10),
                             Expanded(
                               child: Text(
-                                '${_data['data']['userInfoDto']['birthday']}',
+                                // '${_data['data']['userInfoDto']['birthday']}',
+                                "生日",
                               ),
                             ),
                           ],
@@ -234,7 +237,8 @@ class _PersonState extends State<Person> {
                             SizedBox(width: 10),
                             Expanded(
                               child: Text(
-                                '${_data['data']['userInfoDto']['idiograph']}',
+                                // '${_data['data']['userInfoDto']['idiograph']}',
+                                "个性签名",
                                 style: TextStyle(
                                   fontFamily: 'cursive',
                                   // fontStyle: FontStyle.italic,
@@ -256,7 +260,8 @@ class _PersonState extends State<Person> {
                                 color: Colors.grey[700], size: 25),
                             SizedBox(width: 10),
                             Text(
-                              '${_data['data']['userInfoDto']['adress']}',
+                              // '${_data['data']['userInfoDto']['adress']}',
+                              "地址",
                               style: TextStyle(
                                 color: Colors.grey[700],
                                 fontSize: 14,
@@ -302,7 +307,8 @@ class _PersonState extends State<Person> {
 
                         MarkdownPage(
                             data:
-                                "${_data['data']['userInfoDto']['welcomeText']}",
+                                // "${_data['data']['userInfoDto']['welcomeText']}",
+                                "欢迎来到我的个人主页",
                             tocController: widget.tocContorllr),
 
                         //! 结尾

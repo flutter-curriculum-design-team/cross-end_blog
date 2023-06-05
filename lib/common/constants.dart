@@ -12,10 +12,8 @@ class Constants {
   static const String logoTag = 'near.huscarl.loginsample.logo';
   static const String titleTag = 'near.huscarl.loginsample.title';
 
-
-
   //API相关
-  static const String apiBaseUrl = 'https://ec5a-39-129-5-20.ngrok-free.app';
+  static const String apiBaseUrl = 'https://5t1v753196.yicp.fun';
   static const String clientId = 'cross-end';
   static const String clientSecret = 'cross-end';
   static const String grantType = 'password';

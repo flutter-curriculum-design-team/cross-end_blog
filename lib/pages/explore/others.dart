@@ -81,7 +81,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:my_blog/pages/home/data.dart';
 import '../checkIn/custom_route.dart';
-import 'home.dart';
+import '../home/home.dart';
 
 String generateNickname() {
   final animals = ['Panda', 'Kangaroo', 'Fox', 'Squirrel', 'Lion', 'Dolphin', 'Owl', 'Elephant'];
