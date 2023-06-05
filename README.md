@@ -1,19 +1,22 @@
-## 项目名称
+# cross-end blog------small screen mobile flutter terminal
 
-### 需求:
-1、用户信息设置页面（首页home轮播图、头像、昵称等个人资料，自定义博客标签）
-2、博客广场区（可进入他人的博客页面）  
-3、可以在手机端写随笔（类似发说说、发朋友圈）
+## get started
+在运行此项目之前，请确保您已经安装了Flutter SDK。
+- First,download dependency
+```bash
+pub get
+```
+- Second,run
+```bash
+flutter run
+```
+## 项目介绍
 
+此项目为 cross-end blog 小屏端和移动端部分，负责小屏、移动端的渲染展示，作为大屏react渲染端的互补项目，参照了谷歌简约风，给予用户良好的使用体验。
 
+## 项目实现
 
-### 简介
-
-此项目为 **xxx** 的**前端**部分，用于实现**手机界面**。本文档为该项目的开发文档。
-
-### 项目实现
-
-#### 技术选型
+### 技术选型与相关开发文档
 
 - 应用框架：Flutter
 
@@ -40,7 +43,7 @@
     - url_launcher：提供启动 URL 资源的工具
     - font_awesome_flutter：提供字体图标库，包含超过 5,000 种图标
 
-#### 架构设计
+### 架构设计
 
 - 数据层：负责管理应用程序的数据。包括与服务器的网络通信，本地数据的缓存等。在 Flutter 中，我们可以使用 Dart 具有的异步特性来进行网络请求，并使用 SQLite 或 SharedPreferences 等本地存储库来缓存数据。
 
@@ -52,200 +55,18 @@
 
 ### 项目结构
 
-```bash
-flutter_blog
-│  ├─ app
-│  │  ├─ build.gradle
-│  │  └─ src
-│  │     ├─ debug
-│  │     │  └─ AndroidManifest.xml
-│  │     ├─ main
-│  │     │  ├─ AndroidManifest.xml
-│  │     │  ├─ java
-│  │     │  │  ├─ com
-│  │     │  │  │  └─ star
-│  │     │  │  │     └─ my_blog
-│  │     │  │  │        └─ MainActivity.java
-│  │     │  │  └─ io
-│  │     │  │     └─ flutter
-│  │     │  │        └─ plugins
-│  │     │  │           └─ GeneratedPluginRegistrant.java
-│  │     │  └─ res
-│  │     │     ├─ drawable
-│  │     │     │  └─ launch_background.xml
-│  │     │     ├─ drawable-v21
-│  │     │     │  └─ launch_background.xml
-│  │     │     ├─ mipmap-hdpi
-│  │     │     │  └─ ic_launcher.png
-│  │     │     ├─ mipmap-mdpi
-│  │     │     │  └─ ic_launcher.png
-│  │     │     ├─ mipmap-xhdpi
-│  │     │     │  └─ ic_launcher.png
-│  │     │     ├─ mipmap-xxhdpi
-│  │     │     │  └─ ic_launcher.png
-│  │     │     ├─ mipmap-xxxhdpi
-│  │     │     │  └─ ic_launcher.png
-│  │     │     ├─ values
-│  │     │     │  └─ styles.xml
-│  │     │     └─ values-night
-│  │     │        └─ styles.xml
-│  │     └─ profile
-│  │        └─ AndroidManifest.xml
-│  ├─ build.gradle
-│  ├─ gradle
-│  │  └─ wrapper
-│  │     ├─ gradle-wrapper.jar
-│  │     └─ gradle-wrapper.properties
-│  ├─ gradle.properties
-│  ├─ gradlew
-│  ├─ gradlew.bat
-│  ├─ local.properties
-│  └─ settings.gradle
-├─ assets                   
-│  └─ images
-│     ├─ 63786236598065.png
-│     └─ avatar.jpg
-├─ ios
-│  ├─ .gitignore
-│  ├─ Flutter
-│  │  ├─ AppFrameworkInfo.plist
-│  │  ├─ Debug.xcconfig
-│  │  ├─ flutter_export_environment.sh
-│  │  ├─ Generated.xcconfig
-│  │  └─ Release.xcconfig
-├─ lib
-│  ├─ common
-│  │  └─ constants.dart
-│  ├─ main.dart
-│  ├─ pages
-│  │  ├─ detail
-│  │  │  ├─ bottomInfo.dart
-│  │  │  ├─ detail.dart
-│  │  │  ├─ mdToc.dart
-│  │  │  ├─ myCatalog.dart
-│  │  │  └─ MyMD.dart
-│  │  ├─ home
-│  │  │  ├─ action.dart
-│  │  │  ├─ data.dart
-│  │  │  ├─ essay.dart
-│  │  │  ├─ others.dart
-│  │  │  ├─ funList.dart
-│  │  │  ├─ head.dart
-│  │  │  ├─ home.dart
-│  │  │  ├─ postList.dart
-│  │  │  └─ slideShow.dart
-│  │  └─ person
-│  │     ├─ login_page.dart
-│  │     ├─ person.dart
-│  │     └─ personlist.dart
-│  └─ services
-│     └─ homeAPI.dart
-├─ linux
-│  ├─ .gitignore
-│  ├─ CMakeLists.txt
-│  ├─ flutter
-│  │  ├─ CMakeLists.txt
-│  │  ├─ generated_plugins.cmake
-│  │  ├─ generated_plugin_registrant.cc
-│  │  └─ generated_plugin_registrant.h
-│  ├─ main.cc
-│  ├─ my_application.cc
-│  └─ my_application.h
-├─ macos
-│  ├─ .gitignore
-│  ├─ Flutter
-│  │  ├─ ephemeral
-│  │  │  ├─ Flutter-Generated.xcconfig
-│  │  │  └─ flutter_export_environment.sh
-│  │  ├─ Flutter-Debug.xcconfig
-│  │  ├─ Flutter-Release.xcconfig
-│  │  └─ GeneratedPluginRegistrant.swift
-│  ├─ Runner
-│  │  ├─ AppDelegate.swift
-│  │  ├─ Assets.xcassets
-│  │  │  └─ AppIcon.appiconset
-│  │  │     ├─ app_icon_1024.png
-│  │  │     ├─ app_icon_128.png
-│  │  │     ├─ app_icon_16.png
-│  │  │     ├─ app_icon_256.png
-│  │  │     ├─ app_icon_32.png
-│  │  │     ├─ app_icon_512.png
-│  │  │     ├─ app_icon_64.png
-│  │  │     └─ Contents.json
-│  │  ├─ Base.lproj
-│  │  │  └─ MainMenu.xib
-│  │  ├─ Configs
-│  │  │  ├─ AppInfo.xcconfig
-│  │  │  ├─ Debug.xcconfig
-│  │  │  ├─ Release.xcconfig
-│  │  │  └─ Warnings.xcconfig
-│  │  ├─ DebugProfile.entitlements
-│  │  ├─ Info.plist
-│  │  ├─ MainFlutterWindow.swift
-│  │  └─ Release.entitlements
-│  ├─ Runner.xcodeproj
-│  │  ├─ project.pbxproj
-│  │  ├─ project.xcworkspace
-│  │  │  └─ xcshareddata
-│  │  │     └─ IDEWorkspaceChecks.plist
-│  │  └─ xcshareddata
-│  │     └─ xcschemes
-│  │        └─ Runner.xcscheme
-│  └─ Runner.xcworkspace
-│     ├─ contents.xcworkspacedata
-│     └─ xcshareddata
-│        └─ IDEWorkspaceChecks.plist
-├─ pubspec.lock
-├─ pubspec.yaml
-├─ README.md
-├─ test
-│  └─ widget_test.dart
-├─ web
-│  ├─ favicon.png
-│  ├─ icons
-│  │  ├─ Icon-192.png
-│  │  ├─ Icon-512.png
-│  │  ├─ Icon-maskable-192.png
-│  │  └─ Icon-maskable-512.png
-│  ├─ index.html
-│  └─ manifest.json
-└─ windows
-   ├─ .gitignore
-   ├─ CMakeLists.txt
-   ├─ flutter
-   │  ├─ CMakeLists.txt
-   │  ├─ ephemeral
-   │  │  └─ .plugin_symlinks
-   │  ├─ generated_plugins.cmake
-   │  ├─ generated_plugin_registrant.cc
-   │  └─ generated_plugin_registrant.h
-   └─ runner
-      ├─ CMakeLists.txt
-      ├─ flutter_window.cpp
-      ├─ flutter_window.h
-      ├─ main.cpp
-      ├─ resource.h
-      ├─ resources
-      │  └─ app_icon.ico
-      ├─ runner.exe.manifest
-      ├─ Runner.rc
-      ├─ utils.cpp
-      ├─ utils.h
-      ├─ win32_window.cpp
-      └─ win32_window.h
 ```
-
-### 项目启动
-
-请确保已安装Flutter SDK。
-
-在终端中输入以下命令：
-安装所需包
-```bash
-pub get
-```
-
-运行
-```bash
-flutter run
+cross-end blog:.
+├─common
+├─components
+├─mock
+├─models
+├─pages
+│  ├─checkIn
+│  ├─detail
+│  ├─home
+│  ├─person
+│  └─write
+├─services
+└─utils
 ```
