@@ -58,15 +58,67 @@ flutter run
 ```
 cross-end blog:.
 ├─common
+│      constants.dart
+│
 ├─components
+│      animated_numeric_text.dart
+│      fade_in.dart
+│      round_button.dart
+│      SliderDialog.dart
+│
 ├─mock
+│      home.dart
+│
 ├─models
+│      apiProvider.dart
+│
 ├─pages
 │  ├─checkIn
+│  │      custom_route.dart
+│  │      generated_plugin_registrant.dart
+│  │      login_screen.dart
+│  │      transition_route_observer.dart
+│  │
 │  ├─detail
+│  │      bottomInfo.dart
+│  │      detail.dart
+│  │      mdToc.dart
+│  │      myCatalog.dart
+│  │      MyMD.dart
+│  │
+│  ├─explore
+│  │      others.dart
+│  │
 │  ├─home
+│  │      action.dart
+│  │      data.dart
+│  │      essay.dart
+│  │      funList.dart
+│  │      head.dart
+│  │      home.dart
+│  │      postList.dart
+│  │      slideShow.dart
+│  │
 │  ├─person
+│  │      login_page.dart
+│  │      person.dart
+│  │      personlist.dart
+│  │      person_edit.dart
+│  │      slideView_edit.dart
+│  │
 │  └─write
+│          wr_essay.dart
+│
 ├─services
+│      apiInterceptor.dart
+│      base.dart
+│      checkAPI.dart
+│      dio.dart
+│      homeAPI.dart
+│
 └─utils
+        APIUtil.dart
+        data.txt
+        LogUtil.dart
+        StrUtil.dart
 ```
