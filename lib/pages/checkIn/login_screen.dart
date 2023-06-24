@@ -54,7 +54,7 @@ class LoginScreen extends StatelessWidget {
     final int randomNumber = 1 + Random().nextInt(9);
     // Show a dialog with a slider that goes from 0 to 100
     return true;
-    // 这里为了方便调试，先去掉的防爆破!!??！！？？
+    // 这里为了方便调试，先去掉的防爆破!!??！！？
     final result = await showDialog<int>(
       context: context,
       builder: (BuildContext context) {
@@ -165,7 +165,7 @@ class LoginScreen extends StatelessWidget {
         TermOfService(
           id: 'general-term',
           mandatory: true,
-          text: '用户隐私安全协议',
+          text: '用户隐私安全协议 ',
           linkUrl: 'https://github.com/NearHuscarl/flutter_login',
         ),
       ],
@@ -300,7 +300,7 @@ class LoginScreen extends StatelessWidget {
         }
         // final userExists = await checkIfUserExists(value);
         // if (userExists) {
-        //   return 'User already exists';
+        //   return 'User already exists!';
         // }
         return null;
       },
@@ -327,7 +327,7 @@ class LoginScreen extends StatelessWidget {
           debugPrint('Terms of service: ');
           for (final element in signupData.termsOfService) {
             debugPrint(
-              ' - ${element.term.id}: ${element.accepted == true ? 'accepted' : 'rejected'}',
+              ' - ${element.term.id}: ${element.accepted == true ? 'accepted!' : 'rejected!'}',
             );
           }
         }
