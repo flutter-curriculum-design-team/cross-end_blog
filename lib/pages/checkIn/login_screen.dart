@@ -362,7 +362,7 @@ class IntroWidget extends StatelessWidget {
           TextSpan(
             children: [
               TextSpan(
-                text: "You are trying to login/sign up on server hosted on ",
+                text: "You are trying to login/sign up on server hosted on. ",
               ),
               TextSpan(
                 text: "example.com",
