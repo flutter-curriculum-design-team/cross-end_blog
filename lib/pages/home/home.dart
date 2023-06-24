@@ -30,7 +30,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
   final HomeAPI homeAPI = HomeAPI();
 
   bool _isLoading = false;
-  // bool _isLoading = true;
+  
   Map<String, dynamic> _data = {};
   late TabController _tabController;
 
@@ -160,6 +160,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
     return tabViews;
   }
 
+  
   @override
   Widget build(BuildContext context) {
     // 打印检查主页
