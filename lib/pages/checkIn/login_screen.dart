@@ -54,7 +54,7 @@ class LoginScreen extends StatelessWidget {
     final int randomNumber = 1 + Random().nextInt(9);
     // Show a dialog with a slider that goes from 0 to 100
     return true;
-    // 这里为了方便调试，先去掉的防爆破!!??！！？
+    // 这里为了方便调试，先去掉的防爆破!!??！！？？
     final result = await showDialog<int>(
       context: context,
       builder: (BuildContext context) {
@@ -74,7 +74,7 @@ class LoginScreen extends StatelessWidget {
     return response['msg'];
   }
 
-  //找回密码
+  //找回用户密码
   Future<String?> _recoverPassword(String email) async {
 
     var response = await checkAPI.getRecoverCaptcha(email);
