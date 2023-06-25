@@ -91,7 +91,7 @@ class LoginScreen extends StatelessWidget {
     //   return null;
     // });
     var response = await checkAPI.register(data.name, captcha, data.password);
-    if (response['code'] == 100) {
+    if (response['code'] == 200) {
       return null;
     }
     return response['msg'];
