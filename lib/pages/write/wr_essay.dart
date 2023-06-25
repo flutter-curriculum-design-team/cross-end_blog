@@ -131,10 +131,6 @@ class _WritePageState extends State<WritePage> {
             child: InkWell(
               onTap: () async {
                 // 发布按钮点击事件
-                //s
-                //a
-                //76765757576575
-                //4646474
                 Map<String, dynamic> data = {
                   "content": "${_textEditingController.text}",
                   "coverUrl": "",
