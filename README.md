@@ -123,11 +123,7 @@ cross-end blog:.
         StrUtil.dart
 ```
 
-<<<<<<< HEAD
 ## app演示视频
-=======
-### app演示视频
->>>>>>> 3db08848362445280f7c6e6e7b6f1229f702df8d
 (压缩过了，不压缩上传不了)
 https://github.com/flutter-curriculum-design-team/cross-end_blog/assets/98375546/15f93eda-36cb-4649-9d44-a212cd91edac
 
