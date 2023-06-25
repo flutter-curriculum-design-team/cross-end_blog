@@ -69,8 +69,6 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
         "https://www.itying.com/images/flutter/3.png",
         "https://www.itying.com/images/flutter/2.png",
       ];
-
-
     } else {
       var userInfo = await homeAPI.getUserIntialInfo();
       var postPage = await homeAPI.getPostPage();
