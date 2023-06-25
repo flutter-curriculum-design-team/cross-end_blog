@@ -34,10 +34,10 @@ class LoginScreen extends StatelessWidget {
         String token = response['data']['access_token'];
         if (kIsWeb) {
           //SharedPreferences prefs = await SharedPreferences.getInstance();
-          // web端可以使用localStorage存储
+          // web端可以使用localStorage存储；
            //window.localStorage['Authorization'] = "Bearer "+token;
         } else {
-          // 移动平台和桌面平台可以使用SharedPreferences存储
+          // 移动平台和桌面平台可以使用SharedPreferences存储；
           SharedPreferences prefs = await SharedPreferences.getInstance();
           prefs.setString('Authorization', "Bearer "+ token);
         }
@@ -74,7 +74,7 @@ class LoginScreen extends StatelessWidget {
     return response['msg'];
   }
 
-  //找回密码
+  //找回用户密码
   Future<String?> _recoverPassword(String email) async {
 
     var response = await checkAPI.getRecoverCaptcha(email);
@@ -165,7 +165,7 @@ class LoginScreen extends StatelessWidget {
         TermOfService(
           id: 'general-term',
           mandatory: true,
-          text: '用户隐私安全协议',
+          text: '用户隐私安全协议 ',
           linkUrl: 'https://github.com/NearHuscarl/flutter_login',
         ),
       ],
@@ -300,7 +300,7 @@ class LoginScreen extends StatelessWidget {
         }
         // final userExists = await checkIfUserExists(value);
         // if (userExists) {
-        //   return 'User already exists';
+        //   return 'User already exists!';
         // }
         return null;
       },
@@ -327,7 +327,7 @@ class LoginScreen extends StatelessWidget {
           debugPrint('Terms of service: ');
           for (final element in signupData.termsOfService) {
             debugPrint(
-              ' - ${element.term.id}: ${element.accepted == true ? 'accepted' : 'rejected'}',
+              ' - ${element.term.id}: ${element.accepted == true ? 'accepted!' : 'rejected!'}',
             );
           }
         }
@@ -350,7 +350,6 @@ class LoginScreen extends StatelessWidget {
     );
   }
 }
-
 class IntroWidget extends StatelessWidget {
   const IntroWidget({Key? key}) : super(key: key);
 
@@ -362,7 +361,7 @@ class IntroWidget extends StatelessWidget {
           TextSpan(
             children: [
               TextSpan(
-                text: "You are trying to login/sign up on server hosted on ",
+                text: "You are trying to login/sign up on server hosted on. ",
               ),
               TextSpan(
                 text: "example.com",
@@ -386,3 +385,4 @@ class IntroWidget extends StatelessWidget {
     );
   }
 }
+

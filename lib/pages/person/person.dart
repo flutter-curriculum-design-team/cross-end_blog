@@ -61,7 +61,7 @@ class _PersonState extends State<Person> {
                     children: [
                       Image.network(
                         // 'https://picsum.photos/id/1025/600/300',
-                        "https://www.itying.com/images/flutter/1.png",
+                        "https://www.itying.com/images/flutter/1.png", //online获取数据
                         fit: BoxFit.cover,
                         width: double.infinity,
                         height: 200,

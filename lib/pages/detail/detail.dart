@@ -9,10 +9,10 @@ class ArticleDetailPage extends StatelessWidget {
   final String title;
   final String content;
   final String author;
-  final String date;
+  final String date; //日期
   final String tag; // 分类
   final String image;
-  final String thume_up_num; // 点赞数量
+  final String thume_up_num;   // 点赞数量
   final List<String> comments; // 评论
   final String id;
 

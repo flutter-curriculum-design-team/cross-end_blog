@@ -130,7 +130,7 @@ class _WritePageState extends State<WritePage> {
             padding: const EdgeInsets.only(right: 16.0),
             child: InkWell(
               onTap: () async {
-                // 发布按钮点击事件
+                 // 发布按钮点击事件
                 Map<String, dynamic> data = {
                   "content": "${_textEditingController.text}",
                   "coverUrl": "",
@@ -139,7 +139,7 @@ class _WritePageState extends State<WritePage> {
                   "urls": []
                 };
                 Response response = await dio.post(
-                  '/service-content/essay', // 替换成您的API接口URL
+                  '/service-content/essay',  // 替换成您的API接口URL
                   data: data,
                 );
                 print(response.data);
