@@ -34,10 +34,10 @@ class LoginScreen extends StatelessWidget {
         String token = response['data']['access_token'];
         if (kIsWeb) {
           //SharedPreferences prefs = await SharedPreferences.getInstance();
-          // web端可以使用localStorage存储
+          // web端可以使用localStorage存储；
            //window.localStorage['Authorization'] = "Bearer "+token;
         } else {
-          // 移动平台和桌面平台可以使用SharedPreferences存储
+          // 移动平台和桌面平台可以使用SharedPreferences存储；
           SharedPreferences prefs = await SharedPreferences.getInstance();
           prefs.setString('Authorization', "Bearer "+ token);
         }
