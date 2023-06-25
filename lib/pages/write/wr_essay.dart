@@ -130,7 +130,7 @@ class _WritePageState extends State<WritePage> {
             padding: const EdgeInsets.only(right: 16.0),
             child: InkWell(
               onTap: () async {
-                // 发布按钮点击事件
+                 // 发布按钮点击事件
                 Map<String, dynamic> data = {
                   "content": "${_textEditingController.text}",
                   "coverUrl": "",
@@ -139,7 +139,7 @@ class _WritePageState extends State<WritePage> {
                   "urls": []
                 };
                 Response response = await dio.post(
-                  '/service-content/essay', // 替换成您的API接口URL
+                  '/service-content/essay',  // 替换成您的API接口URL
                   data: data,
                 );
                 print(response.data);
@@ -278,122 +278,3 @@ class _WritePageState extends State<WritePage> {
     );
   }
 }
-
-aa
-  sad
-  a
-  d
-  ad
-  a
-  fa
-  f
-  d
-  a
-  d
-  ad
-  as
-  d
-  af
-
-  fa
-  fa
-  fafka
-  kfak
-  ksafkafkaf
-  af
-  a
-  fa
-  dad
-
-  da
-  d
-  ad
-  a
-  da
-  d
-  ad
-  a
-  d
-  asd
-  a
-  da
-  d
-  asd
-  s
-  sd
-  s
-  d
-  sd
-  sd
-  s
-  ds
-  d
-  sd
-  s
-  ds
-  d
-  sd
-  d
-  s
-  d
-  sd
-  s
-  d
-  sd
-  sds
-  d
-  sd
-  sd
-  sd
-  s
-  dsd
-  sd
-  s
-  ds
-  d
-  s
-  d
-  sd
-  s
-  ds
-  d
-  sd
-  s
-  ds
-  dsdsds
-
-  sd
-  sd
-  s
-  d
-  sd
-  s
-  ds
-  ds
-  d
-  sd
-  sdsd
-  s
-  s
-  d
-  sd
-  s
-  ds
-  d
-  d
-  s
-  ds
-  d
-  s
-  d
-  sd
-  sd
-  s
-  d
-  sd
-  s
-  ds
-  dsd
-  sdsd
-  s
-  d
