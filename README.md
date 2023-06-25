@@ -122,3 +122,7 @@ cross-end blog:.
         LogUtil.dart
         StrUtil.dart
 ```
+
+### app演示视频
+https://github.com/flutter-curriculum-design-team/cross-end_blog/assets/98375546/15f93eda-36cb-4649-9d44-a212cd91edac
+
