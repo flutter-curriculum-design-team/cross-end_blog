@@ -351,38 +351,3 @@ class LoginScreen extends StatelessWidget {
   }
 }
 
-class IntroWidget extends StatelessWidget {
-  const IntroWidget({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      children: [
-        const Text.rich(
-          TextSpan(
-            children: [
-              TextSpan(
-                text: "You are trying to login/sign up on server hosted on. ",
-              ),
-              TextSpan(
-                text: "example.com",
-                style: TextStyle(fontWeight: FontWeight.bold),
-              ),
-            ],
-          ),
-          textAlign: TextAlign.justify,
-        ),
-        Row(
-          children: const <Widget>[
-            Expanded(child: Divider()),
-            Padding(
-              padding: EdgeInsets.all(8.0),
-              child: Text("Authenticate"),
-            ),
-            Expanded(child: Divider()),
-          ],
-        ),
-      ],
-    );
-  }
-}
