@@ -1,3 +1,5 @@
+
+https://github.com/flutter-curriculum-design-team/cross-end_blog/assets/98375546/8461aa21-a39d-4801-bfdb-4996f978c86f
 # cross-end blog------small screen mobile flutter terminal
 
 ## get started
@@ -125,5 +127,4 @@ cross-end blog:.
 
 ## app演示视频
 (压缩过了，不压缩上传不了)
-https://github.com/flutter-curriculum-design-team/cross-end_blog/assets/98375546/15f93eda-36cb-4649-9d44-a212cd91edac
-
+Uploading app演示视频.mp4…
