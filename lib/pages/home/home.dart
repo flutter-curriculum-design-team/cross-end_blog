@@ -65,9 +65,9 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
       _posts = generatePosts();
       _id = "2021120053";
       _slideList = [
-        "https://www.itying.com/images/flutter/4.png",
-        "https://www.itying.com/images/flutter/3.png",
-        "https://www.itying.com/images/flutter/2.png",
+        "https://raw.githubusercontent.com/flutter-curriculum-design-team/cross-end_blog/dev/assets/images/2.png",
+        "https://raw.githubusercontent.com/flutter-curriculum-design-team/cross-end_blog/dev/assets/images/3.png",
+        "https://raw.githubusercontent.com/flutter-curriculum-design-team/cross-end_blog/dev/assets/images/4.png",
       ];
     } else {
       var userInfo = await homeAPI.getUserIntialInfo();
